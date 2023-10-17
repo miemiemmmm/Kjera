@@ -27,6 +27,8 @@
     <!-- Load MathJax for labex representation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML"></script>
 
+    <script src="https://api.github.com/repos/miemiemmmm/HPPT/contents/"></script>
+
     <style>
         body {
             margin: 0;
@@ -389,6 +391,17 @@
     </div>
 </div>
 
+<script type="module">
+    import * as kjera from 'https://api.github.com/repos/miemiemmmm/HPPT/contents/';
+  // import { someFunction } from './some-module.js';
+  //
+  // // Use someFunction
+  // someFunction();
+    kjera.test_function();
+    kjera.simple_print("introducing new modules")
+    
+</script>
+
 <script>
     ////////////////////////////////////////////////////
     ////// Global Variables and On-load Actions ////////
@@ -396,16 +409,19 @@
 
     // NOTE: If you are using Private Github Repo to host your slides,
     //       you need to generate a Fine-Grained Personal Access Tokens
-    //       with the content access to your repo
+    //       with the content access to your repo and replace the GITHUB_FINE_GRAINED_TOKEN with the token
+    //       If you are using Public Github Repo, Just comment the Authorization line
     // For more details about Fine-Grained Personal Access Tokens:
     // https://github.blog/2022-10-18-introducing-fine-grained-personal-access-tokens-for-github/
     const github_auth = {
-        Authorization: "Bearer GITHUB_FINE_GRAINED_TOKEN",
+        // Authorization: "Bearer GITHUB_FINE_GRAINED_TOKEN",
         Accept: "application/vnd.github+object",
     };
     // NOTE: Replace the USER_NAME and REPO_NAME with your own Github user name and repository name
     // https://api.github.com/repos/<USER_NAME>/<REPO_NAME>/contents/
     const repo_url = "https://api.github.com/repos/miemiemmmm/HPPT/contents/";
+
+
 
     // Whether or not to PRELOAD all images from the given Github Repo
     // NOTE: Perticularly useful when you do the final presentation
@@ -414,6 +430,7 @@
 
     const img_university_logo = "Example_University_Logo.png"
     const img_welcome = "Example_Image1.png"
+    const img_chapter_break = "Example_Image1.png"
 
     // Default background color for all 3D scenes
     // Use the HEXDEC color code without the "#" sign
@@ -701,7 +718,7 @@
 
     // Declare global image variables for potential reuse
     var univ_logo
-    var image_section_break
+    var img_chapter_break
 
 
 
@@ -713,7 +730,7 @@
         imgdiv.src = univ_logo;
         document.body.appendChild(imgdiv);
 
-        image_section_break= await loadImageBase64(repo_url+"section_break.png");
+        img_chapter_break= await loadImageBase64(repo_url + img_chapter_break);
     })()
 
 
@@ -769,7 +786,7 @@
         var found_chapterbreak = event.currentSlide.querySelector( '.chapter_break_container' );
         var found_chapterbreakimg = event.currentSlide.querySelector( '.chapter_break_container img' );
         if ( found_chapterbreak && found_chapterbreakimg.src.slice(0,4) !== "data") {
-            found_chapterbreakimg.src = image_section_break
+            found_chapterbreakimg.src = img_chapter_break
             found_chapterbreakimg.style.zIndex = -10;
             found_chapterbreakimg.style.width = '75%';
             found_chapterbreakimg.style.position = "absolute"
