@@ -1,5 +1,12 @@
 # Kjera
 
+----------------------------------------------------------------------------------------------
+
+- <strong>This Repo is still under active construction. Functions might experience significant change </strong>
+- <strong>Please use in cautious</strong>
+
+----------------------------------------------------------------------------------------------
+
 Welcome to the **Kjera(Kinetic JavaScript Embeds for Reveal.js and molecular Animation)** repository!
 This is an experimental repository. The author tried many ways to embed 3D objects/molecules in his 
 presentation, however, none of them was satisfactory. The author decided to make his own framework. 
