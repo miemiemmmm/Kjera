@@ -27,248 +27,7 @@
     <!-- Load MathJax for labex representation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML"></script>
 
-    <script src="https://api.github.com/repos/miemiemmmm/HPPT/contents/"></script>
-
-    <style>
-        body {
-            margin: 0;
-        }
-
-        section {
-            position: absolute !important;
-            top:0  !important;
-            left:0  !important;
-            height: 100%  !important;
-            /*width: 100%  !important;*/
-        }
-        canvas {
-            display: block;
-        }
-
-        .presentation_title {
-            position: absolute !important;
-            font-size: 45px !important;
-            font-weight: bold !important;
-            line-height: 1.25 !important;
-            padding-bottom: 20px !important;
-        }
-        .presentation_title2 {
-            padding-right: 50px !important;
-            line-height: 1.25 !important;
-            padding-bottom: 15px !important;
-            text-align: right !important;
-            font-size: 20px !important;
-        }
-
-        .page-number {
-            position: absolute;
-            bottom: 35px;
-            right: 8%;
-            color: black;
-            font-size: 36px;
-        }
-        .uzh_logo{
-            position: absolute !important;
-            top: 2.5vh !important;
-            left: 2.5vw !important;
-            height: 10vh;
-            width: auto;
-        }
-        .symbol_fig{
-            position: absolute;
-            top: 2.5vh;
-            right: 2.5vw;
-            height: 10vh;
-            /*filter: blur(2px); */
-        }
-
-        .reveal .progress{
-            height: 8px !important;
-            background-color: #F3E99F !important;
-        }
-        .reveal .progress span {
-            background-color: #FF6D60 !important;
-            transition: width 0.5s ease-out !important;
-            opacity: 1 !important;
-            z-index: 0 !important;
-        }
-        .laser-pointer {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            border-radius: 50%;
-            opacity: 0;
-            pointer-events: none;
-            z-index: 1000;
-            transition: opacity 0.3s;
-        }
-
-    </style>
-
-    <style>
-        .slide-title {
-            position: absolute !important;
-            top: 12.5% !important;
-            left: 2.5% !important;
-            padding: 10px !important;
-            font-size: 25px !important;
-            font-weight: bold !important;
-            z-index:auto !important;
-        }
-
-        /* Left text and right figure style pair*/
-        .slide_content_style1{
-            position: absolute !important;
-            top: 20% !important;
-            left: 2.5% !important;
-            width: 45% !important;
-            padding: 10px !important;
-            font-size: 20px !important;
-            text-align: left !important;
-        }
-        .slide_item_style1{
-            padding-bottom: 20px  !important;
-            font-size: 20px  !important;
-        }
-        .image-style1{
-            position: absolute !important;
-            top: 20% !important;
-            left: 50% !important;
-            width: 50% !important;
-            height: 65% !important;
-        }
-        .tablecell_style1{
-            font-size: 15px !important;
-        }
-        .highlight_style1{
-            color: darkred !important;
-            font-size: 25px !important;
-            padding-top: 15px !important;
-            padding-bottom: 15px !important;
-            font-weight: bold !important;
-        }
-        .image-style2{
-            position: absolute !important;
-            top: 20% !important;
-            left: 50% !important;
-        }
-
-        .caption_style{
-            font-size: 15px !important;
-            position: relative;
-            /*display: block;*/
-            width:50% !important;
-        }
-
-        .reference_style{
-            position: absolute !important;
-            bottom: 8% !important;
-            left: 0 !important;
-            color: rgb(108, 108, 108) !important;
-            font-size: 8px !important;
-            width:80%;
-            text-align: left;
-        }
-
-        .mol-container{
-            position: relative !important;
-            padding-top: 100%;
-        }
-        .content_subtitle{
-            background: #e6f0b680 !important;
-            padding: 5px !important;
-            margin-top: 10px !important;
-            margin-bottom: 20px !important;
-            background: radial-gradient(circle at center, #e6f0b680, #e6f0b630) !important;
-            border-radius: 10px !important;
-            background-color: #e6f0b680 !important;
-        }
-
-        .mol-container canvas {
-            position: absolute !important;
-            top: 0 !important;
-            bottom: 0 !important;
-            left: 0 !important;
-            right: 0 !important;
-            padding: 0 !important;
-        }
-
-        ul li{
-            padding-bottom:10px !important;
-            font-size: 25px !important;
-        }
-
-        .chapter_break{
-            position: absolute !important;
-            top : 50% !important;
-            left: 50% !important;
-            width:100% !important;
-            font-size: 45px !important;
-            font-weight: bold !important;
-            line-height: 1.25 !important;
-            transform: translate(-50%, -50%) !important
-        }
-
-        .image-gray {
-            filter: grayscale(100%);
-        }
-
-    </style>
-
-    <style>
-        .gallery {
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .gallery-item {
-            position: relative !important;
-            margin-right: 40px !important;
-            margin-left: 40px !important;
-            margin-top: 20px !important;
-            margin-bottom:50px !important;
-        }
-
-        .gallery-item img {
-            width: auto;
-            height: 150px;
-            transition: all 0.3s ease-out;
-        }
-
-        .gallery-item:hover img {
-            transform: scale(3);
-        }
-        .gallery-item_style2:hover img {
-            transform: scale(1.5) !important;
-        }
-        .gallery-item_style3:hover img {
-            transform: scale(2) translateY(20%) translateX(20%) !important;
-        }
-        .gallery-item_style4:hover img {
-            transform: scale(2) translateX(-10%) !important;
-        }
-
-        .gallery-item figcaption {
-            position: absolute;
-            bottom: -20px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            border-radius: 10px;
-            background-color: #fff0dbd0;
-            padding: 10px;
-            transform: translateY(100%);
-            transition: transform 0.3s ease-out;
-        }
-
-        .gallery-item:hover figcaption {
-            transform: translateY(170px);
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 
 </head>
 <body>
@@ -302,11 +61,11 @@
         <section data-state="slide_OutlinePage">
             <p class="slide-title">Outline</p>
             <div class="slide_content_style1">
-                <p class="slide_item_style1" style="padding-left: 10%; ">1. Chapter 1: Example Chapter </p>
-                <p class="slide_item_style1" style="padding-left: 10%; ">2. Chapter 2: Example Chapter </p>
-                <p class="slide_item_style1" style="padding-left: 10%; ">3. Chapter 3: Example Chapter </p>
-                <p class="slide_item_style1" style="padding-left: 10%; ">4. Chapter 4: Example Chapter </p>
-                <p class="slide_item_style1" style="padding-left: 10%; ">5. Chapter 5: Example Chapter </p>
+                <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 1: Example Chapter </p>
+                <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 2: Example Chapter </p>
+                <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 3: Example Chapter </p>
+                <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 4: Example Chapter </p>
+                <p class="slide_item_style1" style="padding-left: 10%; ">Chapter 5: Example Chapter </p>
             </div>
 
             <div class="image-style1">
@@ -391,18 +150,13 @@
     </div>
 </div>
 
-<script type="module">
-    import * as kjera from 'https://api.github.com/repos/miemiemmmm/HPPT/contents/';
-  // import { someFunction } from './some-module.js';
-  //
-  // // Use someFunction
-  // someFunction();
-    kjera.test_function();
-    kjera.simple_print("introducing new modules")
-    
-</script>
 
-<script>
+
+<script type="module">
+    // import { kjera } from "https://cdn.jsdelivr.net/gh/miemiemmmm/HPPT@main/modules.js
+    // import { kjera } from "./modules.js" // local, for development only
+    import * as kjera from "./modules.js" // local, for development only
+
     ////////////////////////////////////////////////////
     ////// Global Variables and On-load Actions ////////
     ////////////////////////////////////////////////////
@@ -421,12 +175,30 @@
     // https://api.github.com/repos/<USER_NAME>/<REPO_NAME>/contents/
     const repo_url = "https://api.github.com/repos/miemiemmmm/HPPT/contents/";
 
+    kjera.set_repo(repo_url)
+    // Setting up token could improve the amount of traffic you can send to Github
+    kjera.set_token("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")
+
+
+    console.log("#################################")
+    console.log("#################################")
+    console.log("#################################")
+
+    const PRELOAD_FIGURES = true
+    const FIGURES = {}
+	if (PRELOAD_FIGURES == true){
+        console.log("Before get all images <<<<<<<<<<<<<")
+
+        kjera.getAllImages(FIGURES)
+        console.log("After get all images <<<<<<<<<<<<<")
+	}
+
 
 
     // Whether or not to PRELOAD all images from the given Github Repo
     // NOTE: Perticularly useful when you do the final presentation
     //       You might want to disable it when you are still developing your slides
-    const PRELOAD_FIGURES = true
+
 
     const img_university_logo = "Example_University_Logo.png"
     const img_welcome = "Example_Image1.png"
@@ -435,127 +207,6 @@
     // Default background color for all 3D scenes
     // Use the HEXDEC color code without the "#" sign
     const scene_bgcolor = "FFF9DE";
-
-
-    async function getGithubContents(url){
-        /////////////////////////////////////////////////
-        // Fetch file from Github via content API
-        /////////////////////////////////////////////////
-        ret = await fetch(url, {headers: github_auth});
-        data = await ret.json();
-        if (data.hasOwnProperty("content") && data.content.length > 0){
-            console.log("Download file from github: route 1", url);
-            return data.content
-        } else if (data.hasOwnProperty("git_url")){
-            console.log("Download file from github: route 2", data.git_url);
-            ret_blob = await fetch(data.git_url, {headers: github_auth});
-            data2 = await ret_blob.json();
-            return data2.content
-        } else if (data.hasOwnProperty("sha")){
-            const blob_url =  url.replace(/contents.*/, "git/blobs")+"/"+data.sha;
-            console.log("Download file from github: route 3", blob_url);
-            ret_blob = await fetch(blob_url, {headers: github_auth});
-            data2 = await ret_blob.json();
-            return data2.content
-        }
-    }
-
-    async function loadImageBase64(fileurl) {
-        /////////////////////////////////////////////////
-        // Read image Github URL to base64 encoded string
-        /////////////////////////////////////////////////
-        try {
-            const data = await getGithubContents(fileurl);
-            let dataUriPrefix;
-            let format = fileurl.split('/').pop().split('.').pop();
-            if (format == 'png') {
-                dataUriPrefix = 'data:image/png;base64,';
-            } else if (format == 'jpeg' || format == 'jpg') {
-                dataUriPrefix = 'data:image/jpeg;base64,';
-            } else if (format == 'gif') {
-                dataUriPrefix = 'data:image/gif;base64,';
-            }
-            return dataUriPrefix + data
-        } catch (error) {
-            console.error('An error occurred while fetching the file:', error);
-        }
-    }
-
-    async function setupImage(image, figContent){
-        /////////////////////////////////////////////////
-        // Setup an image to an Element ID or HTMLElement
-        // figContent could be based64 encoded string, Github URL,
-        // or the file path to the image in the repo
-        /////////////////////////////////////////////////
-		var img;
-		// Check if image is an HTMLElement (like what's returned by document.getElementById)
-		if (image instanceof HTMLElement) {
-			img = image;
-			console.log("image is an HTMLElement")
-		} else if (typeof image === 'string') {
-			// If it's not, assume it's an id
-			img = document.getElementById(image);
-			if (img == null) {
-				console.log("No such image id: ", image, " in the slide.")
-				return;
-			}
-		}
-		if (figContent.startsWith("data")){
-			// Base64 as input
-			img.src = figContent;
-		} else if (figContent.startsWith("http")) {
-			// Assume it is the file path to the image in the repo
-			const fig_content = await loadImageBase64(figContent);
-			img.src = fig_content;
-		} else if (figContent.length > 0 && figContent.length < 70) {
-			// Image file name as input
-			const fig_content = await loadImageBase64(repo_url + figContent);
-			img.src = fig_content;
-		} else {
-			// Actual file in the root folder as input
-			img.src = figContent;
-		}
-    }
-
-    async function getImagesFromRepo() {
-        /////////////////////////////////////////////////
-        // Get all images from the repo asynchonously
-        // Lazy mode: Automatically get all images from the repo
-        // Save to the global object: FIGURES
-        /////////////////////////////////////////////////
-		try {
-			// Get the contents of the repo
-			let response = await fetch(repo_url, {headers: github_auth});
-			let data = await response.json();
-			// For each file in the repo
-            // 1. Check image;
-            // 2. Fetch the image and store the image in base64 format
-			for (let file of data) {
-				if (file.name.endsWith('.png') || file.name.endsWith('.jpg') || file.name.endsWith('.jpeg') || file.name.endsWith('.gif')) {
-					filename = file.name.split('?')[0].split("/")[file.name.split('?')[0].split("/").length-1];
-					FIGURES[filename] = await loadImageBase64(repo_url + filename);
-				}
-			}
-		} catch (error) {
-			console.error("An error occurred:", error);
-		}
-	}
-
-
-	function getFileName(element){
-        /////////////////////////////////////////////////
-        // Shortcut function to resolve the file name of an element
-	    // The <src> attribute of the image element should be the name of the desired image file
-        /////////////////////////////////////////////////
-		if (typeof element === 'string' || element instanceof String){
-			let elem = document.getElementById(element);
-			// let src_str = elem.src.split("?")[0];
-			return elem.src.split("/")[elem.src.split("/").length-1]
-		} else if (element instanceof HTMLElement){
-			let elem = element;
-			return elem.src.split("/")[elem.src.split("/").length-1]
-		}
-	}
 
     async function initPLYObject(divid, fileurl){
         // Initialize the scene with a ply object
@@ -603,6 +254,7 @@
         camera.updateProjectionMatrix();
         return [scene, renderer, camera, light]
     }
+
 	//////////// A Typical Animation Function ////////////
 	// function animate() {
 	//     requestAnimationFrame(animate);
@@ -622,6 +274,7 @@
         scene.add(themesh);
         return [scene, renderer, camera, light]
     }
+
     function loadPLYMesh(plycontent, scene, camera, light) {
         // Load PLY file from base64 encoded string and return mesh
         const loader = new PLYLoader();
@@ -689,6 +342,7 @@
         viewer.zoomTo();
         viewer.render();
     }
+
     function reset_canvas(parent_div, viewer){
         // The canvas size is reset for the 3Dmol viewer if you switch slides
         // Reset the canvas size when you go back to the slide that contains the 3Dmol viewer
@@ -709,34 +363,28 @@
     /////////////////////////////////////////////////
 
     // Set up the background picture of the welcome slide
-    setupImage("welcome_bgimage", repo_url + img_welcome)
-    var FIGURES = {}
-	if (PRELOAD_FIGURES == true){
-		getImagesFromRepo()
-	}
+    await kjera.setupImage("welcome_bgimage", repo_url + "Example_Image1.png")
+    // setupImage("welcome_bgimage", repo_url + img_welcome)
+
 
 
     // Declare global image variables for potential reuse
     var univ_logo
-    var img_chapter_break
+    var b64_chapter_break
 
 
 
     (async ()=>{
         // Set university logo
-        univ_logo = await loadImageBase64(repo_url + img_university_logo);
+        univ_logo = await kjera.getImageb64(repo_url + img_university_logo);
         var imgdiv = document.createElement('img');
         imgdiv.classList.add('uzh_logo');
         imgdiv.src = univ_logo;
         document.body.appendChild(imgdiv);
 
-        img_chapter_break= await loadImageBase64(repo_url + img_chapter_break);
+        b64_chapter_break = await kjera.getImageb64(repo_url + img_chapter_break);
     })()
 
-
-    /////////////////////////////////////////////
-    ///// Initialize the reveal.js framework ////
-    /////////////////////////////////////////////
     Reveal.initialize({
         // Set the theme to white
         theme: 'white',
@@ -744,6 +392,14 @@
         transition: 'convex',
         backgroundTransition: "zoom"
     });
+
+    // throw new Error("Stop here")
+
+
+    ///////////////////////////////////////////////////////////////
+    ////////////// Initialize the reveal.js framework /////////////
+    ///////////////////////////////////////////////////////////////
+
 
     /////////////////////////////////////////////
     ////// Auxiliary and onchange functions /////
@@ -766,16 +422,17 @@
             document.body.appendChild( pagediv );
         }
 
-        var symbol_fig = document.querySelector( '.symbol_fig' );
-        if ( symbol_fig ) {
-            symbol_fig.src = image_symbol
-        } else {
-            var symboldiv = document.createElement( 'img' );
-            symboldiv.classList.add( 'symbol_fig' );
-            symboldiv.src = image_symbol;
-            symboldiv.style.zIndex = 0
-            document.body.appendChild(symboldiv)
-        }
+        // ??????????????????
+        // var symbol_fig = document.querySelector( '.symbol_fig' );
+        // if ( symbol_fig ) {
+        //     symbol_fig.src = image_symbol
+        // } else {
+        //     var symboldiv = document.createElement( 'img' );
+        //     symboldiv.classList.add( 'symbol_fig' );
+        //     symboldiv.src = image_symbol;
+        //     symboldiv.style.zIndex = 0
+        //     document.body.appendChild(symboldiv)
+        // }
 
         const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
         const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -786,7 +443,7 @@
         var found_chapterbreak = event.currentSlide.querySelector( '.chapter_break_container' );
         var found_chapterbreakimg = event.currentSlide.querySelector( '.chapter_break_container img' );
         if ( found_chapterbreak && found_chapterbreakimg.src.slice(0,4) !== "data") {
-            found_chapterbreakimg.src = img_chapter_break
+            found_chapterbreakimg.src = b64_chapter_break
             found_chapterbreakimg.style.zIndex = -10;
             found_chapterbreakimg.style.width = '75%';
             found_chapterbreakimg.style.position = "absolute"
