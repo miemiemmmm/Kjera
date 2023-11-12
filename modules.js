@@ -161,11 +161,9 @@ function getFileName(element){
     }
 }
 
-console.log($3Dmol)
-
-export { testfunc };
 
 export {
+    testfunc,
     getContents,
     getImageb64,
     set_token,
