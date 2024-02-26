@@ -29,8 +29,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS_HTML"></script>
 
     
-    <!-- <link rel="stylesheet" type="text/css" href="https://miemiemmmm.b-cdn.net/Kjera/styles.css"> -->
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="https://miemiemmmm.b-cdn.net/Kjera/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./styles.css"> -->
 
 </head>
 
@@ -39,10 +39,7 @@
     <!-- Add laser pointer object -->
     <div class="laser-pointer"></div>
     <div class="slides" id="slide_container">
-        <!--
-        Welcome page
-        The background image is set in the javascript part
-        -->
+        <!-- Welcome page: the background image is set in the javascript part -->
         <section data-state="slide_TitlePage">
             <div style="position:relative; height:40%; width:100%; top:10%">
                 <p class="presentation_title" style="color:#1C226B; -webkit-text-stroke: 1.5px blue;">Example Slides Using Kjera for Interactive slides</p>
@@ -51,8 +48,7 @@
             <p class="presentation_info">Date / Time</p>
             <p class="presentation_info">Affiliation</p>
             <p class="presentation_info">Affiliation2</p>
-            <!-- TODO -->
-            <img id="welcome_bgimage" src="Example_Image1.png" class="bgimg_style_welcome">
+            <img id="welcome_bgimage" src="https://miemiemmmm.b-cdn.net/Kjera/Example_Image1.png" class="bgimg_style_welcome">
         </section>
 
         <!--Template page-->
@@ -69,20 +65,18 @@
         <section data-state="slide_OutlinePage">
             <p class="slide-title">Outline</p>
             <div class="box_style_mainbody">
-                <!-- TODO: add chapters -->
                 <p class="slide_item_style1" style="font-size: 30px !important; ">1. Overall slide arrangement </p>
                 <p class="slide_item_style1" style="font-size: 30px !important; ">2. Source modules and style sheets </p>
                 <p class="slide_item_style1" style="font-size: 30px !important; ">3. Image insertion </p>
                 <p class="slide_item_style1" style="font-size: 30px !important; ">4. Inline \(\LaTeX\) functions </p>
                 <p class="slide_item_style1" style="font-size: 30px !important; ">5. View 3D objects via Three.js </p>
-                <p class="slide_item_style1" style="font-size: 30px !important; ">6. View 3D molecules via 3DMol.js </p>
-                <!-- <p class="slide_item_style1" style="font-size: 30px !important; ">7. JavaScript callback functions </p> -->
+                <p class="slide_item_style1" style="font-size: 30px !important; ">6. View 3D molecules via 3Dmol.js </p>
                 <p class="slide_item_style1" style="font-size: 30px !important; ">7. Other applets</p>
                 <p class="slide_item_style1" style="font-size: 30px !important; ">8. Summary</p>
             </div>
 
             <div class="image-style1">
-                <img src="Example_Image1.png" class="bgimg_style_rbig">
+                <img src="https://miemiemmmm.b-cdn.net/Kjera/Example_Image1.png" class="bgimg_style_rbig">
             </div>
         </section>
 
@@ -100,37 +94,40 @@
 			</div>
 		</section>
 
+
         <section>
             <p class="slide-title" style="border:solid black; border-width: 3px;">This is the box for page title (class: <i>slide-title</i>)</p>
             <div class="box_style_leftbound" style="border:solid blue; border-width: 3px;">
                 <p class="slide_item_style1">Left boundary box (class: <i>box_style_leftbound</i>) </p>
                 <p class="slide_item_style1">1. Use <i>div</i> plus a box style as text box to display slides contents</p>
+                <p class="slide_item_style1">2. Attach <i>p</i> tags to itemize the slides (class: <i>slide_item_style1</i>)</p>
                 <p class="slide_item_style1 code_block">
                     &ltdiv class="box_style_leftbound"&gt<br>
                         &nbsp;&nbsp;&ltp class="slide_item_style1"&gt1. Contents A&lt/p&gt<br>
-                        &nbsp;&nbsp;Add more contents<br>
+                        &nbsp;&nbsp;&lt!-- Add more contents --&gt<br>
                     &lt/div&gt
                 </p>
-                <p class="slide_item_style1">2. Attach <i>p</i> tags to itemize the slides (class: <i>slide_item_style1</i>)</p>
-                <p class="slide_item_style1">2. The default <i>text-align</i> property for this box type is left </p>
+                
+                <p class="slide_item_style1">3. The default <i>text-align</i> property for this box type is left </p>
                 
             </div>
-            <div style="position: absolute; inset: 50% 60% 10% 10% !important; border:solid black; border-width: 3px; text-align: center; background-color: bisque;"> 
-                <p class="slide_item_style1">This is an example box with<br> <i class="highlight_style1">inset: 50% 60% 10% 10%</i></p>
+            <div style="position: absolute; inset: 60% 60% 10% 10% !important; border:solid black; border-width: 3px; text-align: center; background-color: bisque;"> 
+                <p class="slide_item_style1">This is an example box with<br> <i class="highlight_style1">inset: 60% 60% 10% 10%</i></p>
                 <p class="slide_item_style1">Change the "inset" property (shortcut to <i>top, right, bottom, left</i> properties) for new box styles</p>
             </div>
 
             <div class="box_style_rightbound" style="border:solid orange; border-width: 3px;">
                 <p class="slide_item_style1">Right boundary box (class: <i>box_style_rightbound</i>)</p>
-                <p class="slide_item_style1">1. Images are recommended to attach in to the text box for finer control of image style</p>
-                <p class="slide_item_style1">2. Typically images requires manual change on <i>width</i> or <i>height</i> property to fit its size to slide's overall style  </p>
+                <p class="slide_item_style1">1. It is advisable to attach images into text boxes for enhanced control over image styling</p>
+                <p class="slide_item_style1">2. Images requires manual change on <i>width</i> or <i>height</i> properties to fit to the size of the slide or text box </p>
                 <p class="slide_item_style1">3. The default <i>text-align</i> property for this box type is center </p>
 
-                <img src="Example_Image1.png" style="width:40%; border:solid black; border-width: 3px;">
-                <p class="content_subtitle">Fig: The example image is 50% of its parent box's width. Figure caption uses the class <i>content_subtitle</i></p>
+                <img src="https://miemiemmmm.b-cdn.net/Kjera/Example_Image3.png" style="width:40%; border:solid black; border-width: 3px;">
+                <p class="content_subtitle">Fig: The example image is 50% of its parent box's width. The figure caption is using the class: <i>content_subtitle</i></p>
             </div>
             <p class="reference_style" style="border:solid black; border-width: 3px;">This is the box for potential references (class: <i>reference_style</i>)</p>
         </section>
+
 
         <section>
             <p class="slide-title" style="border:solid black; border-width: 3px;">More box style examples</p>
@@ -150,6 +147,7 @@
 
         </section> 
 
+
         <section>
             <p class="slide-title" style="border:solid black; border-width: 3px;">More box style examples</p>
             <div class="box_style_mainbody" style="border:solid black; border-width: 5px;">
@@ -160,10 +158,11 @@
             </div>
             <div class="box_style_fullrightbound" style="border:solid red; border-width: 3px;">
                 <p class="slide_item_style1">Full-height right boundary box (class: <i>box_style_fullrightbound</i>)</p>
-                <p class="slide_item_style1">The major different between this box type and <i>box_style_rightbound</i> is the height (<a class="highlight_style1">5%-95%</a> VS <a class="highlight_style1">20%-95%</a> of the view port) </p>
+                <p class="slide_item_style1">The major different between this box type and <i>box_style_rightbound</i> is the height (<a class="highlight_style1">5%-95%</a> VS <a class="highlight_style1">20%-95%</a> of the slide background) </p>
                     
             </div>
         </section> 
+
 
         <section>
             <div class="chapter_break_container">
@@ -172,22 +171,22 @@
             </div>
         </section>
 
+
         <section>
             <p class="slide-title">Source modules and style sheets</p>
             <div class="box_style_leftbound onhover-top" style="overflow-wrap: break-word; padding-left: 0 !important;">
                 <p class="slide_item_style1 highlight_style1">JSDelivr CDN + Github</p>
                 <div class="content_subtitle">
                     <p class="slide_item_style1 highlight_style1">Advantages:</p>
-                    <p class="slide_item_style1">Free; Good for long-term deployment rather than development; </p>
+                    <p class="slide_item_style1">Free, ideal for lightweighted deployment</p>
                     <p class="slide_item_style1 highlight_style1">Disadvantages:</p>
-                    <p class="slide_item_style1">Latency for cache update; Needs the repository to be public; </p>
+                    <p class="slide_item_style1">Cache update delays; Requires public repository; </p>
                 </div>
 
-                <p class="slide_item_style1">This requires the Github repository to be public and compose the URL in the following way:</p>
+                <p class="slide_item_style1">Compose the URL in the following way:</p>
                 <p class="code_block slide_item_style1">https://cdn.jsdelivr.net/{type}/{user}/{repo}@{branch}/{file}<br>
                     <a style="font-size: 10px !important; color: blue; ">type: gh(Github); user: Github user name; repo: Repo name; <br>branch: Branch name or tag; file: File path;
                     </a><br>
-                    In this example, they are: <br>
                     https://cdn.jsdelivr.net/gh/miemiemmmm/Kjera@main/styles.css // for the style sheet<br>
                     https://cdn.jsdelivr.net/gh/miemiemmmm/Kjera@main/modules.js // for the modules
 
@@ -202,9 +201,9 @@
                 <p class="slide_item_style1 highlight_style1">Commercial CDN</p>
                 <div class="content_subtitle">
                     <p class="slide_item_style1 highlight_style1">Advantages:</p>
-                    <p class="slide_item_style1">More stable and controlable; No need repository to be public; </p>
+                    <p class="slide_item_style1">Higher stability and controllability; No constraints on visibility; </p>
                     <p class="slide_item_style1 highlight_style1">Disadvantages:</p>
-                    <p class="slide_item_style1">Needs extra configuration; Requires extra fee; </p>
+                    <p class="slide_item_style1">Additional setup required; Requires extra fees; </p>
                 </div>
                 <p class="slide_item_style1">To source style sheet (in head part): </p>
                 <p class="code_block slide_item_style1">&ltlink rel="stylesheet" type="text/css" href="https://miemiemmmm.b-cdn.net/Kjera/styles.css"&gt</p>
@@ -214,13 +213,13 @@
         </section>
 
 
-
         <section>
             <div class="chapter_break_container">
                 <p class="chapter_title">Image insertion</p>
                 <img>
             </div>
         </section>
+
 
         <section>
             <p class="slide-title">CDN-based image insertion </p>
@@ -229,56 +228,51 @@
                 <p class="slide_item_style1 code_block">
                     &ltimg src="https://cdn.jsdelivr.net/gh/miemiemmmm/Kjera@main/Example_Image1.png" style="width:60%;"&gt
                 </p>
-                <p class="slide_item_style1">2. The image might overflow the box, manually set the width or height of the image. </p>
-                <!-- <p class="slide_item_style1">1. Add <i>img</i> tag to the any box</p>
-                <p class="slide_item_style1">2. Set the src attribute to the image URL</p> -->
-                <p class="slide_item_style1">3. Add extra style/class to realize more effect/interactions</p>
-                <p class="slide_item_style1">4. To match the width of the caption and image, add the caption to a <i>div</i> with class <i>caption_container</i> and manually adjust the width of the caption.</p>
+                <p class="slide_item_style1">2. The image might overflow the text box, requires manually setup for the width or height of the image </p>
+                <p class="slide_item_style1">3. Add extra style/class to realize more effect/interactions </p>
+                <p class="slide_item_style1">4. To match the width of the caption and image, add the caption to a <i>div</i> with class <i>caption_container</i> and manually adjust the width of the caption (Fig 1)</p>
             </div>
 
             <div class="box_style_urc onhover-top" style="border: solid red; border-width: 4px; text-align: center;">
-                <p class="slide_item_style1" style="font-size: 12px !important;">
-                    
-                </p>
                 <img src="https://cdn.jsdelivr.net/gh/miemiemmmm/Kjera@main/Example_Image1.png" style="width:60%; filter:grayscale(100%)">
                 <div class="caption_container">
-                    <p class="content_subtitle" style="width:60%;">Fig: Image from JSdelivr with a constrained width (60% of its parent box). Applied an extra filter: grayscale(100%); The width of caption is explicitly set to 60% for width alignment; Added class <i>onhover-top</i> effect. </p>
+                    <p class="content_subtitle" style="width:60%;">Fig 1. Image from JSdelivr with a constrained width (60% of its parent box). Applied an extra filter: grayscale(100%); The width of caption is explicitly set to 60% for width alignment; Added class <i>onhover-top</i> effect. </p>
                 </div>
             </div>
 
             <div class="box_style_lowerbound onhover-top" style="border: solid blue; border-width: 3px;">
-                <img src="https://miemiemmmm.b-cdn.net/Kjera/Example_Image1.png" style="height:90%; filter:contrast(15%)">
-                <p class="content_subtitle">Fig: Image from commercial CDN with a constrained height (90% of its parent box). Applied an extra filter: contrast(15%); The width of caption is by default inherited from its parent box without explicit width alignment.</p>
+                <img src="https://miemiemmmm.b-cdn.net/Kjera/Example_Image3.png" style="height:90%; filter:contrast(15%)">
+                <p class="content_subtitle">Fig 2. Image from commercial CDN with a constrained height (90% of its parent box). Applied an extra filter: contrast(15%); The width of caption is by default inherited from its parent box without explicit width alignment.</p>
             </div>
         </section>
+
 
         <section data-state="slide_FigFromGithub">
             <p class="slide-title">Fetch from Github API</p>
             <div class="box_style_leftbound" style="padding-left: 0 !important; ">
-                <p class="slide_item_style1 highlight_style1">Asynchronous fetch images from time to time</p>
-                <p class="slide_item_style1">1. Needs to define the <i class="highlight_style1">id</i> attribute of the image (for element selection)</p>
-                <p class="slide_item_style1">2. Fetch and setup the image in JS callback functions </p>
-                <p class="code_block">
+                <p class="slide_item_style1 highlight_style1">Asynchronous Image Fetching</p>
+                <p class="slide_item_style1">1. Assign an <i class="highlight_style1">id</i> attribute to the image for element selection </p>
+                <p class="slide_item_style1">2. Use JS callback functions to fetch and configure the image </p>
+                <p class="slide_item_style1 code_block">
                     // When displaying the slide, fetch and setup the image <br>
                     const github_api_url = "https://api.github.com/repos/miemiemmmm/Kjera/contents/"; <br>
                     kjera.set_repo(github_api_url); <br>
-                    kjera.setupImage("fetch_img_1", "Example_Image1.png"); <br>
+                    kjera.setupImage("fetch_img_1", "Example_Image2.png"); <br>
                     <a class="highlight_style1">// This example used filepath in Github repo, also supports base64 (as in Fig 2) or URL of the image</a>
                 </p>
-                <p class="slide_item_style1">3. Set the styles of image in image style attribute or in JS part</p>
+                <p class="slide_item_style1">3. Set the styles of image in its HTML style or in JS callback</p>
 
                 <img id="fetch_img_1" class="image-gray" style="height:35% !important">
-                <p class="content_subtitle">Fig 1: Asynchronous fetch from Github; The <i>id</i> of the image is "fetch_img_1" and filepath of the image is "Example_Image1.png"; Applied class: <i>image-gray</i> for the on-hover-removal of the gray-scale filter. </p>
+                <p class="content_subtitle">Fig 1: Asynchronous fetch from Github; The <i>id</i> of the image is "fetch_img_1" and the desired image is "Example_Image2.png"; Applied class: <i>image-gray</i> for the on-hover-removal of the gray-scale filter. </p>
                 <p class="slide_item_style1 highlight_style1"></p>
-                
 
             </div>
 
             <div class="box_style_rightbound" style="padding-left: 0 !important; text-align: left;">
-                <p class="slide_item_style1 highlight_style1">Fetch images all in once </p>
-                <p class="slide_item_style1">1. Query all image contents in the repository </p>
-                <p class="slide_item_style1">2. Fetch all images to a global object (file name as keys and image base64 as values) for further use </p>
-                <p class="slide_item_style1">3. Could do it while the initialization of slides to avoid fetching image from time to time or to realize some advanced effects.</p>
+                <p class="slide_item_style1 highlight_style1">Batch Image Fetching </p>
+                <p class="slide_item_style1">1. Retrieve all image data from the repository </p>
+                <p class="slide_item_style1">2. Store all images in a global object, using file names as keys and their base64-encoded strings as values, for later access </p>
+                <p class="slide_item_style1">3. Perform this operation during slide initialization to minimize repetitive fetching and enable advanced effects</p>
 
                 <p class="code_block">
                     // Already setup repo's url as in Fig 1 demo. <br>
@@ -295,6 +289,7 @@
             </div>
         </section>
 
+
         <section>
             <div class="chapter_break_container">
                 <p class="chapter_title">Inline \(\LaTeX\) functions</p>
@@ -302,12 +297,13 @@
             </div>
         </section>
 
-        <section data-state="slide_FigFromGithub">
+
+        <section data-state="">
             <p class="slide-title">Use MathJax for formula insertion </p>
             <div class="box_style_leftbound" >
-                <p class="slide_item_style1">1. Use backslash + bracket \( \backslash( \) some LaTeX expressions \(\backslash) \) to enable LaTeX interpretation. </p>
-                <p class="slide_item_style1">2. For formula taking the whole line, use a <i>p</i> tag </p>
-                <p class="slide_item_style1">3. For inline formula, just embed in the text </p>
+                <p class="slide_item_style1">1. To interpret LaTeX, use a backslash followed by parentheses: <a class="highlight_style1">\( \backslash( \) LaTeX expressions \(\backslash) \) </a> </p>
+                <p class="slide_item_style1">2. Use a &ltp&gt tag for standalone formulas </p>
+                <p class="slide_item_style1">3. Embed inline formulas directly within the text </p>
                 <p class="slide_item_style1 code_block">
                     &ltp&gt \(\backslash(\)f(x)=\exp(-x^{2})\(\backslash)\) &lt/p&gt <br>
                     arbitrary real constants \(\backslash(\)a\(\backslash)\), \(\backslash(\)b\(\backslash)\) and non-zero \(\backslash(\)c\(\backslash)\). <br>
@@ -325,6 +321,7 @@
             </div>
         </section>
 
+
         <section>
             <div class="chapter_break_container">
                 <p class="chapter_title">View 3D objects via Three.js </p>
@@ -332,20 +329,21 @@
             </div>
         </section>
 
+
         <section data-state="slide_3DModels">
             <div class="slide-title">View 3D objects via Three.js </div>
             <div class="box_style_leftbound" >
-                <p class="slide_item_style1">1. A <i>div</i> has to be kept for further rendering of the 3D object</p>
+                <p class="slide_item_style1">1. Reserve a &ltdiv&gt for further rendering of the 3D object</p>
                 <p class="code_block">
                     &ltdiv id="model_1" style="height: 90% !important; width: 90% !important"&gt&lt/div&gt
                 </p>
-                <p class="slide_item_style1">2. Required additional check to avoid re-addition of new canvas when re-playing the slide </p>
+                <p class="slide_item_style1">2. Prevent duplicate canvas addition upon slide replay </p>
                 <p class="slide_item_style1 code_block">
                     if (document.getElementById("model_1").querySelector("canvas") == null){<br>
                         &nbsp;&nbsp;// Render the 3D object only if the object is not initialized <br>
                     }
                 </p>
-                <p class="slide_item_style1">3. Initialize a PLY object, scene, renderer, camera and light will be returned for further operations</p>
+                <p class="slide_item_style1">3. Initializing a PLY object will return scene, renderer, camera and light for further operations</p>
                 <p class="slide_item_style1 code_block">
                     kjera.set_bgcolor("#FFF9DE") // change the background color<br>
                     kjera.initPLYObject("model_1", "https://miemiemmmm.b-cdn.net/GM_Feb2024/ViewExample_THR.ply").then(function(ret){ <br>
@@ -362,8 +360,6 @@
             <div class="box_style_rightbound">
                 <div id="model_1"  style="height: 90% !important; width: 90% !important"></div>
                 <p class="slide_item_style1 " style="font-size: 20px !important; padding-left: 0 !important;">Stage 1: Voxelized feature of Thr</p>
-                <!-- <div id="model_2"  style="height: 40% !important; width: 90% !important"></div>
-                <p class="slide_item_style1" style="font-size: 20px !important; padding-left: 0 !important;">Stage 2: Surface feature of Asn-His</p> -->
             </div>
 
         </section>
@@ -371,16 +367,17 @@
 
         <section>
             <div class="chapter_break_container">
-                <p class="chapter_title">View 3D molecules via 3DMol.js</p>
+                <p class="chapter_title">View 3D molecules via 3Dmol.js</p>
                 <img>
             </div>
         </section>
 
+
         <section data-state="slide_3DmolExample">
-            <div class="slide-title">View 3D molecules via 3DMol.js </div>
+            <div class="slide-title">View 3D molecules via 3Dmol.js </div>
             <div class="box_style_leftbound" >
-                <p class="slide_item_style1">1. Similar to Three.js-based method, keep a <i>div</i> for further rendering and a canvas will be attached after initialization</p>
-                <p class="slide_item_style1">2. Have to remove the canvas before rendering the molecule (Due to some implicit reason in 3Dmol)</p>
+                <p class="slide_item_style1">1. Similar to PLY object display, reserve a <i>&ltdiv&gt</i> and a canvas will be attached after stage initialization</p>
+                <p class="slide_item_style1">2. Remove the existing canvas before Initializing the molecule (Due to some implicit reason in 3Dmol)</p>
                 <p class="code_block" >
                     var thecanvas = document.getElementById("3dmol_viewer").querySelector("canvas");<br>
                     if (thecanvas){ thecanvas.remove(); }<br>
@@ -389,20 +386,17 @@
                 <p class="code_block" >
                     kjera.set_bgcolor("#F85F73") // change the background color<br>
                     kjera.add3DMolObject("3dmol_viewer", "https://miemiemmmm.b-cdn.net/Kjera/protein.pdb").then(ret=>{ <br>
-                        &nbsp;&nbsp;Do something with the viewer <br>
+                        &nbsp;&nbsp;// Do something with the viewer <br>
                     }) <br>
                 </p>
-                
             </div>
 
             <div class="box_style_rightbound">
                 <div id="3dmol_viewer" style="height: 100% !important; width: 100% !important; text-align: center;"></div>
-                <p class="content_subtitle">Example structure</p>
-                <!-- "https://miemiemmmm.b-cdn.net/Kjera/ligand.mol2"
-                "https://miemiemmmm.b-cdn.net/Kjera/protein.pdb" -->
-
+                <p class="content_subtitle">Stage 1. An example structure with protein as ribbon and ligand as sticks. A \(16\times16\times16\) grid is aligned to the center of the ligand with a transprent light green box. </p>
             </div>
         </section>
+
 
         <section>
             <div class="chapter_break_container">
@@ -411,33 +405,32 @@
             </div>
         </section>
 
+
         <section data-state="">
             <div class="slide-title">Other applets </div>
             <div class="box_style_leftbound" >
                 <p class="slide_item_style1">1. Click number 1 to activate the laster pointer. </p>
                 <p class="slide_item_style1">2. On-hover display (class: <a class="onhover_show" style="border: solid black;">onhover_show</a>) and on-click fixation. </p>
-                <p class="slide_item_style1">3. On-hover zoom (class: an img tag has to be inside a gallery item: <i>gallery-item</i>, <i>gallery-item2</i>, <i>gallery-item3</i>) </p>
-                <p class="slide_item_style1">4. On-hover gray-scale filter </p>
+                <p class="slide_item_style1">3. On-hover zoom (class: an <i>img</i> tag inside a gallery item: <i>gallery-item</i>, <i>gallery-item2</i>, <i>gallery-item3</i>) (Fig 1) </p>
+                <p class="slide_item_style1">4. On-hover gray-scale filter (Fig 1)</p>
 
-                <p class="slide_item_style1">This slides template will not go deeper into front-end element interaction. </p>
+                <p class="slide_item_style1">This slide does not delve into the DOM element interactions and animations. However, you may explore and create your custom animations or applets. </p>
             </div>
             <div class="box_style_rightbound">
                 <div class="gallery-item">
-                    <img src="Example_Image1.png" style="width: 70%; "  class="image-gray">
-                    <p class="content_subtitle">Fig: On-hover zoom and gray-scale filter</p>
+                    <img src="https://miemiemmmm.b-cdn.net/Kjera/Example_Image1.png" style="width: 70%; "  class="image-gray">
+                    <p class="content_subtitle">Fig 1: On-hover zoom and gray-scale filter</p>
                 </div>
             </div>
         </section>
-
 
         
         <section data-state="">
             <div class="slide-title">Summary </div>
             <div class="box_style_leftbound" >
-                <p class="slide_item_style1"><a href="https://github.com/miemiemmmm/Kjera" target="_blank">Kjera</a> provides a template slides. </p>
+                <p class="slide_item_style1"><a href="https://github.com/miemiemmmm/Kjera" target="_blank">Kjera</a> provides a template for interactive slides with 3D objects and molecules. </p>
                 <p class="slide_item_style1">For further technical problems, you might need to refer to the original API references for solutions. </p>
-                <p class="slide_item_style1">You might need to zoom for different screen resolution. </p>
-                <p class="slide_item_style1">This example slides is ideal on 2K monitor (needs ~80% in 1080p and ~150% on 4K monitor)</p>
+                
                 <p class="slide_item_style1">Packages used in this project: </p>
                 <p class="slide_item_style1 code_block">
                     <a href="https://revealjs.com/" target="_blank">Reveal.js</a>: Presentation framework<br>
@@ -450,13 +443,15 @@
             </div>
             <div class="box_style_rightbound " style="text-align: left; height:auto !important; ">
                 <div class="content_subtitle">
-                    <p class="slide_item_style1 highlight_style1">Personal suggestions: </p>
-                    <p class="slide_item_style1">Choose a smart IDE (<a href="https://code.visualstudio.com/">VSCode</a> for example)/AI copilot to reduce the boring HTML coding</p>
-                    <p class="slide_item_style1">Github API has <a href="https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting">limitation</a> over anonymous fetch of files, you might need a server to deliver a token (<a class="highlight_style1">READ-ONLY</a>) or directly fetch contents. </p>
+                    <p class="slide_item_style1 highlight_style1">Kind suggestions: </p>
+                    <p class="slide_item_style1">Choose an intelligent IDE (such as <a href="https://code.visualstudio.com/">VSCode</a>) or an AI assistant to streamline the repetitive aspects of HTML coding</p>
+                    <p class="slide_item_style1">The GitHub API imposes <a href="https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting">limitation</a> on anonymous file requests. 
+                        Consider providing an access token (<a class="highlight_style1">READ-ONLY</a>) or using a server to fetch contents directly to overcome this constraint. </p>
+                    <p class="slide_item_style1">Adjust zoom levels for varying screen resolutions (for instance, this slide set is optimized for a 2K monitor but may require ~80% zoom on 1080p monitors and ~150% for 4K monitors).</p>
+                    <p class="slide_item_style1"></p>
                     <p class="slide_item_style1 highlight_style1">Good luck and have fun!</p>
                 </div>
             </div>
-
         </section>
 
 
@@ -480,10 +475,10 @@
     // import * as kjera from "https://cdn.jsdelivr.net/gh/miemiemmmm/Kjera@main/modules.js" 
     
     // Source modules via Commercial CDN
-    // import * as kjera from "https://miemiemmmm.b-cdn.net/Kjera/modules.js"
+    import * as kjera from "https://miemiemmmm.b-cdn.net/Kjera/modules.js"
 
     // Source modules locally
-    import * as kjera from "./modules.js" 
+    // import * as kjera from "./modules.js" 
 
     ////////////////////////////////////////////////////
     ////// Global Variables and On-load Actions ////////
@@ -499,12 +494,14 @@
     // NOTE: Replace the USER_NAME and REPO_NAME with your own Github user name and repository name
     // https://api.github.com/repos/<USER_NAME>/<REPO_NAME>/contents/
     const repo_url = "https://api.github.com/repos/miemiemmmm/Kjera/contents/";
-
     kjera.set_repo(repo_url)
-    // Setting up token could improve the amount of traffic you can send to Github
-    // TODO remove this token before the final presentation  !!!!!
 
-    const PRELOAD_FIGURES = true
+    // Setting up token could improve the amount of traffic you can send to Github
+    // TODO remove this token before pushing the code ODOT 
+    // kjera.set_token("YOUR_GITHUB_FINE_GRAINED_TOKEN"); 
+
+
+    const PRELOAD_FIGURES = true; 
     const FIGURES = {}; 
 	if (PRELOAD_FIGURES == true){
         kjera.getAllImages(FIGURES); 
@@ -514,26 +511,22 @@
     // NOTE: Perticularly useful when you do the final presentation
     //       You might want to disable it when you are still developing your slides
 
-    const img_university_logo = "uzh_logo_e_pos_web_main.jpg"
-    const img_welcome = "Example_Image1.png"
-    const img_chapter_break = "Example_Image1.png"
+    const img_university_logo = "uzh_logo_e_pos_web_main.jpg"; 
+    const img_welcome = "Example_Image1.png"; 
+    const img_chapter_break = "Example_Image2.png"; 
 
     // Default background color for all 3D scenes
-    kjera.set_bgcolor("#FFF9DE");
+    kjera.set_bgcolor("#FFF9DE"); 
 
     /////////////////////////////////////////////////
     //////////// On-load Functions to do ////////////
     /////////////////////////////////////////////////
 
-    // Set up the background picture of the welcome slide
-    // await kjera.setupImage("welcome_bgimage", repo_url + "Example_Image1.png")
-    // setupImage("welcome_bgimage", repo_url + img_welcome)
-
-
     // Declare global image variables for potential reuse
+    var univ_logo
     (async ()=>{
         // Set the logo of your institute
-        var univ_logo = await kjera.getImageb64(repo_url + img_university_logo);
+        univ_logo = await kjera.getImageb64(repo_url + img_university_logo);
         var imgdiv = document.createElement('img');
         imgdiv.classList.add('institute_logo');
         imgdiv.src = univ_logo;
@@ -552,22 +545,30 @@
     ///////////////////////////////////////////////////////////////
     ////////////// Initialize the reveal.js framework /////////////
     ///////////////////////////////////////////////////////////////
-    
     Reveal.addEventListener( 'slidechanged', function( event ) {
         if (event.currentSlide && event.currentSlide.getAttribute('data-state') == "slide_FigFromGithub") {
             const github_api_url = "https://api.github.com/repos/miemiemmmm/Kjera/contents/";
             kjera.set_repo(github_api_url);
             let img1 = document.getElementById("fetch_img_1");
-            kjera.setupImage("fetch_img_1", "Example_Image1.png").then(
-                function(ret){
-                    console.log("Image is fetched")
+            var start_time = new Date().getTime();
+            kjera.setupImage("fetch_img_1", "Example_Image2.png").then(function(ret){
+                    // Reset the caption text 
+                    var text = $("#fetch_img_1").next().html();
+                    var new_text = text+" <a class='highlight_style1'>Figure loading time: "+(new Date().getTime() - start_time)+"ms (This message is added via JS callback) </a>"
+                    $("#fetch_img_1").next().html(new_text)
                 }
             )
             
+            var start_time2 = new Date().getTime();
             const FIGURES = {}; 
             kjera.getAllImages(FIGURES).then(
                 function(ret){
                     // change image source every 1.5 seconds
+                    var text = $("#fetch_img_2").next().html();
+                    var file_nr = Object.keys(FIGURES).length
+                    var new_text = text+" <a class='highlight_style1'>Figure loading time: "+(new Date().getTime() - start_time2)+"ms; Retrieved: "+file_nr+" files including " + Object.keys(FIGURES).join(", ") + " (This message is added via JS callback)</a>"
+                    $("#fetch_img_2").next().html(new_text)
+                    
                     let img = document.getElementById("fetch_img_2"); 
                     img.src = FIGURES["Example_Image1.png"]; 
                     let c = 0; 
@@ -614,28 +615,34 @@
     Reveal.addEventListener( 'slidechanged', function( event ) {
         if (event.currentSlide && event.currentSlide.getAttribute('data-state') == "slide_3DmolExample"){
             var thecanvas = document.getElementById("3dmol_viewer").querySelector("canvas");
-            if (thecanvas){
-                console.log("Remove the canvas")
-                thecanvas.remove();
-            }
+            if (thecanvas){ thecanvas.remove(); }
             console.log("Reset the canvas size for the 3Dmol viewer")
             kjera.set_bgcolor("#F85F73")
-            kjera.add3DMolObject("3dmol_viewer", "https://miemiemmmm.b-cdn.net/Kjera/protein.pdb").then(function(viewer){
+            kjera.add3DMolObject("3dmol_viewer", "https://miemiemmmm.b-cdn.net/Kjera/protein2.pdb").then(function(viewer){
                 // Set styles for the protein structure
-                kjera.addModel(viewer, "https://miemiemmmm.b-cdn.net/Kjera/ligand.mol2")
-                //   viewer.setStyle({}, { cartoon:{color: "gray"} } );
-                //   var ligandSelection = {resn: 'LIG',  byres:true, expand:5};
-                //   viewer.setStyle(ligandSelection, {stick: {colorscheme:"greenCarbon"}, cartoon: {}});
+                viewer.setStyle({}, { cartoon:{color: "gray"} } );
+                kjera.addModel(viewer, "https://miemiemmmm.b-cdn.net/Kjera/ligand.mol2").then(function(viewer){
+                        // var ligandSelection = {within: {distance: 4, sel:{model: 1}}, byres:true};
+                        // var ligandSelection = {and:[{model:1, expand:5}, {model:[0,1]}], byres:true}; 
+                        var ligandSelection = {model:1, expand:5, byres:true};
+                        console.log(viewer.selectedAtoms(ligandSelection))
+                        viewer.setStyle(ligandSelection, {stick: {colorscheme:"greenCarbon"}});
+                        viewer.render();
+                    }
+                )
+            
                 // Add Grid points
-                const gridcenter = [8.77, -26.88, 4.23];
+                const gridcenter = [8.77, -26.88, 4.23];  // Manually set the center of the grid
                 const ls = [16, 16, 16];
                 const dims = [16, 16, 16];
-                //   kjera.renderGridPoints(viewer, center, ls, dims);
+                viewer = kjera.renderGridPoints(viewer, gridcenter, ls, dims);
                 viewer.addBox({center:{x:gridcenter[0], y:gridcenter[1] ,z:gridcenter[2]},
                     dimensions: {w:ls[0], h:ls[1], d:ls[2]},
                     color:'#adf7d1',
                     opacity:0.85
                 })
+                viewer.zoomTo();
+                viewer.render();
             })
         }
     });
@@ -716,8 +723,8 @@
         mouseX = event.clientX;
         mouseY = event.clientY;
         if (usingLaser) {
-        laserPointer.style.left = event.clientX - laserPointer.clientWidth / 2 + 'px';
-        laserPointer.style.top = event.clientY - laserPointer.clientHeight / 2 + 'px';
+            laserPointer.style.left = event.clientX - laserPointer.clientWidth / 2 + 'px';
+            laserPointer.style.top = event.clientY - laserPointer.clientHeight / 2 + 'px';
         }
     });
     
@@ -729,16 +736,10 @@
             let img_height = $(this).height();
             $(this).next().css({"transform": "translateY("+img_height/2+"px)"});
             $(this).css({"z-index": 999});
-            // if ($(this).hasClass("image-gray")){
-            //     $(this).css({"filter": "grayscale(0%)"});
-            // }
         },
         function() {
             $(this).next().css({"transform": "translateY(0px)"});
             $(this).css({"z-index": 0});
-            // if ($(this).hasClass("image-gray")){
-            //     $(this).css({"filter": "grayscale(100%)"});
-            // }
         }
     )
     $(".image-gray").hover(

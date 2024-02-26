@@ -208,6 +208,7 @@ function renderGridPoints(viewer, center, lengths, dims) {
   }
   viewer.zoomTo();
   viewer.render();
+  return viewer;
 }
 
 function resetCanvas(parent_div, viewer){
