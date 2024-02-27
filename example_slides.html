@@ -618,7 +618,7 @@
             if (thecanvas){ thecanvas.remove(); }
             console.log("Reset the canvas size for the 3Dmol viewer")
             kjera.set_bgcolor("#F85F73")
-            kjera.add3DMolObject("3dmol_viewer", "https://miemiemmmm.b-cdn.net/Kjera/protein2.pdb").then(function(viewer){
+            kjera.add3DMolObject("3dmol_viewer", "https://miemiemmmm.b-cdn.net/Kjera/protein.pdb").then(function(viewer){
                 // Set styles for the protein structure
                 viewer.setStyle({}, { cartoon:{color: "gray"} } );
                 kjera.addModel(viewer, "https://miemiemmmm.b-cdn.net/Kjera/ligand.mol2").then(function(viewer){
